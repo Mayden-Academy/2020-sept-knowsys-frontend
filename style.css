@@ -1,0 +1,244 @@
+
+body {
+    background-color: #414850;
+    height: 1px;
+}
+
+/* This is all the stuff for the circles background */
+
+@keyframes moveOne {
+    0% {
+        transform: translateX(0px)
+    }
+    25% {
+        transform: translateX(-75px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(75px);
+    }
+    100% {
+transform: translateX(0px);
+    }
+}
+
+@keyframes moveTwo {
+    0% {
+        transform: translateX(0px)
+    }
+    25% {
+        transform: translateX(75px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(-75px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.circleBackground{
+    position: fixed;
+}
+
+.blueCircle{
+    fill:#56BCE5;
+    filter: url('#blur');
+
+    animation-name: moveOne;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    transform-origin: 50%;
+    animation-timing-function: linear;
+}
+
+.orangeCircle{
+    fill:#FDAE47;
+    filter: url('#blur');
+
+    animation-name: moveTwo;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    transform-origin: 50%;
+    animation-timing-function: linear;
+}
+
+.whiteCircle {
+    fill:#ffffff;
+    filter: url('#blur');
+
+    animation-name: moveOne;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    transform-origin: 50%;
+    animation-timing-function: linear;
+}
+
+/* Nav Bar */
+.navBar {
+    text-align: center;
+    font-family: Futura;
+    background: black;
+    width: 150px;
+}
+
+/* Logo */
+.knowsysLogoBox {
+    position: fixed;
+    width: 150px;
+    height: 185px;
+    background: #CFD1D3;
+}
+
+.knowsysBrain {
+    rotate: 180deg;
+    fill: #000000;
+}
+
+.knowsysLogo .knowsysBrain {
+    transform: scale(70%);
+    ;
+}
+
+.logoText {
+    margin-top: -5px;
+    letter-spacing: 3px;
+    color: #2C3136;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+/* My Profile Nav Button */
+.myProfileNavButton {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    top: 185px;
+    background: #2C3136;
+}
+
+.myProfileNavButtonText {
+    color: #ffffff;
+    font-weight: 200;
+    font-size: 1.2rem;
+
+}
+
+.logOutNavButton {
+    position: fixed;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    top: 235px;
+    background: #E84118;
+    font-size: 0.6rem;
+}
+
+.logOutNavButtonText {
+color: white;
+}
+
+/* PAGE BODY STUFF */
+.pageBody {
+    position: absolute;
+    margin-left: 200px;
+}
+
+/* PROFILE SECTION */
+
+.profile {
+    padding-right: 50px;
+    padding-bottom: 25px;
+}
+
+.pageHeader {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-top: 50px;
+    text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.profileContent{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+
+.userBio {
+font-family: 'Roboto', sans-serif;
+padding-left: 30px;
+background:rgba(255, 255, 255, 0.8);
+border-radius: 50px;
+}
+
+.bioTextHeader {
+    margin: 0px;
+    font-size: 2rem;
+}
+
+.userBio .bioTextHeader {
+    font-weight: 800;
+    padding-top: 30px;
+}
+
+.userBio .bioTextBody {
+    font-size: 2rem;
+    padding-bottom: 15px;
+    padding-right: 30px;
+    font-weight: 400;
+}
+    
+
+
+/* TIL FEED */
+.tilFeed {
+    display: flex;
+    flex-direction: column;
+    left: 200px;
+    top: 50px;
+    padding-right: 50px;
+}
+
+.til { 
+    display: flex;
+    flex-direction: column;
+    background: rgba(44, 49, 54, 0.8);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+}
+
+.tilHeaderText {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 20px;
+}
+
+.tilDate {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: -15px;
+
+}
+
+.tilBodyText {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2rem;
+    margin-left: 5px;
+    margin-right: 25px;
+    margin-top: 10px;
+}
