@@ -12,7 +12,7 @@ import UserPage from "./Components/UserPage"
 ReactDOM.render(
   <React.StrictMode>
     <NavBar />
-    <UserPage />
+    <CreateAccountPage />
   </React.StrictMode>,
   document.getElementById('root')
 );

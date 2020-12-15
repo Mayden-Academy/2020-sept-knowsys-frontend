@@ -5,6 +5,13 @@ form {
     align-content: center;
 }
 
+.createUserForm {
+    background-color: #2C3136;
+    border-radius: 25px;
+    padding: 30px;
+    width: 500px;
+}
+
 .usernameRequirements {
     margin-bottom: 25px;
 }

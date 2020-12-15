@@ -20,9 +20,8 @@ code {
     monospace;
 }
 
-/* ANIMATED BACKGROUND */
 
-/* @keyframes moveOne {
+@keyframes moveOne {
   0% {
       transform: translateX(0px)
   }
@@ -95,4 +94,4 @@ transform: translateX(0px);
   animation-iteration-count: infinite;
   transform-origin: 50%;
   animation-timing-function: linear;
-} */
+}

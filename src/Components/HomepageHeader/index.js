@@ -6,7 +6,7 @@ class HomepageHeader extends React.Component {
       return (
           <div>
                 <h1>Welcome to Knowsy</h1>
-                <h2>Learn something new every day.</h2>
+                <h2>You learn something new every day.</h2>
             </div>
       )
     }
