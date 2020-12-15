@@ -19,3 +19,80 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* ANIMATED BACKGROUND */
+
+/* @keyframes moveOne {
+  0% {
+      transform: translateX(0px)
+  }
+  25% {
+      transform: translateX(-75px);
+  }
+  50% {
+      transform: translateX(0);
+  }
+  75% {
+      transform: translateX(75px);
+  }
+  100% {
+transform: translateX(0px);
+  }
+}
+
+@keyframes moveTwo {
+  0% {
+      transform: translateX(0px)
+  }
+  25% {
+      transform: translateX(75px);
+  }
+  50% {
+      transform: translateX(0);
+  }
+  75% {
+      transform: translateX(-75px);
+  }
+  100% {
+      transform: translateX(0px);
+  }
+}
+
+.circleBackground{
+  position: fixed;
+  z-index: -10;
+  display: flex;
+}
+
+.blueCircle{
+  fill:#56BCE5;
+  filter: url('#blur');
+
+  animation-name: moveOne;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  transform-origin: 50%;
+  animation-timing-function: linear;
+}
+
+.orangeCircle{
+  fill:#FDAE47;
+  filter: url('#blur');
+
+  animation-name: moveTwo;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  transform-origin: 50%;
+  animation-timing-function: linear;
+}
+
+.whiteCircle {
+  fill:#ffffff;
+  filter: url('#blur');
+
+  animation-name: moveOne;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  transform-origin: 50%;
+  animation-timing-function: linear;
+} */

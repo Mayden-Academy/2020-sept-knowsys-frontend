@@ -5,6 +5,7 @@ class CreateAccountForm extends React.Component {
 	render() {
 		return (
             <div className="createUserForm">
+                
                 <form>
                     <h2>Create Account</h2>
                     <input className="emailInput" type="text" placeholder="Email:"></input>

@@ -9,7 +9,6 @@ class CreateAccountPage extends React.Component {
             <div className="bodyContent">
             <HomepageHeader />
             <CreateAccountForm />
-
             </div>
 		)
 	}

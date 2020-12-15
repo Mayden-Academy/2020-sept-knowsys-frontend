@@ -7,12 +7,12 @@ import CreateAccountForm from './Components/CreateAccountForm'
 import NavBar from './Components/NavBar';
 import CreateAccountPage from "./Components/CreateAccountPage";
 import HomepageHeader from "./Components/HomepageHeader"
-import LoginPage from "./Components/LoginPage"
+import UserPage from "./Components/UserPage"
 
 ReactDOM.render(
   <React.StrictMode>
     <NavBar />
-    <CreateAccountPage />
+    <UserPage />
   </React.StrictMode>,
   document.getElementById('root')
 );
