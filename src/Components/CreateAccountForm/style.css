@@ -1,0 +1,55 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.createUserForm {
+background-color: #2C3136;
+border-radius: 25px;
+padding: 30px;
+display: flex;
+}
+
+.createUserForm label {
+font-size: 2rem;
+font-weight: 800;
+}
+
+::placeholder {
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.createUserForm input {
+border: none;
+border-bottom: 4px solid #ffffff;
+resize: none;
+font-size: 1.5rem;
+font-weight: 800;
+background-color: rgba(44, 49, 54, 0.8);
+color: #ffffff;
+width: 300px;
+}
+
+.passwordRequirements {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.createUserForm button {
+    background: #2ECC71;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+textarea {
+    resize: none;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    background-color: rgba(44, 49, 54, 0.8);
+    color: #ffffff;
+
+}

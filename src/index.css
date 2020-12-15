@@ -5,6 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto", Helvetica, sans-serif;
+  background-color: #414850;
+  color: #ffffff;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: 150px auto;
 }
 
 code {

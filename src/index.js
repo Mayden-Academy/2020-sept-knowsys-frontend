@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CreateAccountForm from './Components/CreateAccountForm'
+import NavBar from './Components/NavBar';
+import CreateAccountPage from "./Components/CreateAccountPage";
+import CreateAccountPageHeader from "./Components/CreateAccountPageHeader"
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <NavBar />
+    <CreateAccountPage />
   </React.StrictMode>,
   document.getElementById('root')
 );

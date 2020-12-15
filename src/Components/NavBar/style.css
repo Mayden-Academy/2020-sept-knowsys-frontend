@@ -1,0 +1,46 @@
+.navBar {
+    text-align: center;
+    font-family: Futura;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navLogoBackground {
+    width: 150px;
+    height: 175px;
+    background: #CFD1D3;
+    display: flex;
+    flex-direction: column;
+}
+
+.logoImage {
+    rotate: 180deg;
+    scale: 60%;
+}
+
+.navBar h3 {
+    margin-top: -12.5px;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    font-weight: 400;
+    color: #2C3136;
+}
+
+.navBar button {
+    font-family: Futura, Helvetica, sans-serif;
+    font-weight: 800;
+    border: none;
+    width: 150px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    padding: 10px;
+}
+
+.myProfileButton {
+background-color: #56BCE5;
+}
+
+.signOutButton {
+background-color: #E84118;
+}
