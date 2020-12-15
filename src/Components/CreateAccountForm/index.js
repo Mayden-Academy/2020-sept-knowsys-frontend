@@ -7,11 +7,11 @@ class CreateAccountForm extends React.Component {
             <div className="createUserForm">
                 <form>
                     <h2>Create Account</h2>
-                    <input className="loginInputs" type="text" placeholder="Email:"></input>
-                    <input classname="loginInputs" type="password" placeholder="Password:"></input>
+                    <input className="emailInput" type="text" placeholder="Email:"></input>
+                    <input className="passwordInput" type="password" placeholder="Password:"></input>
                     <p className="passwordRequirementsHeader">Password must:</p>
                     <p className="passwordRequirementsText">+ Contain at least one upper and Lowercase character</p>
-                    <div>
+                    <div >
                         <label>@</label>
                         <input className="usernameInput" type="text" placeholder="Unique Username:"></input>
                     </div>

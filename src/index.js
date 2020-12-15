@@ -12,7 +12,7 @@ import LoginPage from "./Components/LoginPage"
 ReactDOM.render(
   <React.StrictMode>
     <NavBar />
-    <LoginPage />
+    <CreateAccountPage />
   </React.StrictMode>,
   document.getElementById('root')
 );
