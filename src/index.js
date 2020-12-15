@@ -6,12 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import CreateAccountForm from './Components/CreateAccountForm'
 import NavBar from './Components/NavBar';
 import CreateAccountPage from "./Components/CreateAccountPage";
-import CreateAccountPageHeader from "./Components/CreateAccountPageHeader"
+import HomepageHeader from "./Components/HomepageHeader"
+import LoginPage from "./Components/LoginPage"
 
 ReactDOM.render(
   <React.StrictMode>
     <NavBar />
-    <CreateAccountPage />
+    <LoginPage />
   </React.StrictMode>,
   document.getElementById('root')
 );

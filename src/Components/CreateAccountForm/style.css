@@ -5,11 +5,21 @@ form {
     align-content: center;
 }
 
+.usernameRequirements {
+    margin-bottom: 25px;
+}
+
 .createUserForm {
-background-color: #2C3136;
-border-radius: 25px;
-padding: 30px;
-display: flex;
+    background-color: #2C3136;
+    border-radius: 25px;
+    padding: 30px;
+    width: 500px;
+}
+
+.createUserForm h2 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
 }
 
 .createUserForm label {
@@ -18,38 +28,68 @@ font-weight: 800;
 }
 
 ::placeholder {
-    color: #ffffff;
-    font-weight: 400;
+color: #ffffff;
+font-weight: 400;
+}
+
+.loginInputs {
+    margin-bottom: 15px;
 }
 
 .createUserForm input {
 border: none;
-border-bottom: 4px solid #ffffff;
+border-bottom: 4px solid #55B9E2;
 resize: none;
 font-size: 1.5rem;
 font-weight: 800;
 background-color: rgba(44, 49, 54, 0.8);
 color: #ffffff;
-width: 300px;
 }
 
-.passwordRequirements {
+
+.passwordRequirementsHeader {
+    margin-bottom: -5px;
+}
+
+.passwordRequirementsText {
     margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.createUserForm button {
-    background: #2ECC71;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
+    margin-bottom: 25px;
 }
 
 textarea {
     resize: none;
     border: none;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 4px solid #55B9E2;
     background-color: rgba(44, 49, 54, 0.8);
     color: #ffffff;
+   width: 300px;
+}
 
+.createAccountButtonContainer button {
+    width: 100px;
+    height: 50px;
+    border: none;
+    text-align: center;
+    color: #ffffff;
+    font-family: Futura, "Roboto", "JetBrains Mono", sans-serif;
+    font-weight: 800;
+    font-size: 0.9rem;
+    transition-duration: 0.4s;
+    border-radius: 25px;
+}
+
+.createAccountButtonContainer {
+    margin-top: 25px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+
+}
+
+.confirmFormSubmit {
+    background: #2ECC71;
+}
+
+.cancelFormSubmit {
+    background:#E84118;
 }

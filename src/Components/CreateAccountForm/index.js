@@ -6,15 +6,22 @@ class CreateAccountForm extends React.Component {
 		return (
             <div className="createUserForm">
                 <form>
-                    <input type="text" placeholder="Email:"></input>
-                    <input type="password" placeholder="Password:"></input>
-                    <p classname="passwordRequirements">Password must:</p>
-                    <p className="passwordRequirements">+ Contain at least one upper and Lowercase character</p>
-                    <div><label>@</label>
-                    <input type="text" placeholder="Unique Username:"></input></div>
+                    <h2>Create Account</h2>
+                    <input className="loginInputs" type="text" placeholder="Email:"></input>
+                    <input classname="loginInputs" type="password" placeholder="Password:"></input>
+                    <p className="passwordRequirementsHeader">Password must:</p>
+                    <p className="passwordRequirementsText">+ Contain at least one upper and Lowercase character</p>
+                    <div>
+                        <label>@</label>
+                        <input className="usernameInput" type="text" placeholder="Unique Username:"></input>
+                    </div>
+                    <p className="usernameRequirements">Max 14 characters</p>
                     <label>Add a bio (Optional)</label>
                     <textarea placeholder="Max 500 characters"></textarea>
-                    <button class="confirmSubmit" type="submit" label="CONFIRM" />
+                    <div class="createAccountButtonContainer">
+                    <button url="hello.com" class="confirmFormSubmit" type="submit" text="text">SUBMIT</button>
+                    <button class="cancelFormSubmit">CANCEL</button>
+                    </div>
                 </form>
             </div>
 		)
