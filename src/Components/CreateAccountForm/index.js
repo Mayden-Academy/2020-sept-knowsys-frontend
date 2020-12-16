@@ -35,7 +35,18 @@ class CreateAccountForm extends React.Component {
             return true
         }
         else {
-            alert("Max 500 characters")
+            alert("Bio does not meet requirments, Max 500 characters")
+            return false;
+        }
+    }
+
+    validateUsername = (ValidateUsername) => {
+        console.log(ValidateUsername)
+        if(ValidateUsername.length <14) {
+            return true
+        }
+        else {
+            alert("Bio does not meet requirments, Max 14characters")
             return false;
         }
     }
@@ -46,6 +57,7 @@ class CreateAccountForm extends React.Component {
         console.log(e)
         this.validateEmail(e.target[0].value)
         this.validatePassword(e.target[1].value)
+        this.validateUsername(e.target[2].value)
         this.validateBio(e.target[3].value)
     }
 
