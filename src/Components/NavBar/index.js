@@ -11,7 +11,7 @@ class NavBar extends React.Component {
                     <h3>KNOWSY</h3>
                 </div>
                     <Link to="/user" className="myProfileButton">MY PROFILE</Link>
-                    <Link to ="/" className="signOutButton">LOG OUT</Link>
+                    <Link to ="/login" className="logOutButton">LOG OUT</Link>
                 </div>
 
 		)
