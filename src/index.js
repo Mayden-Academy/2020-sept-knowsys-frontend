@@ -17,6 +17,7 @@ class Routing extends React.Component {
             <Router>
                 <div>
                     {/*must  have  nav here*/}
+                    <NavBar />
 
                     <Switch>
                         {/*<Route path="/" exact component={ LoginPage } />*/}
@@ -32,9 +33,7 @@ class Routing extends React.Component {
 
 ReactDOM.render(
   <React.StrictMode>
-      <NavBar />
       <Routing />
-    {/*<NavBar />*/}
     {/*<LoginPage />*/}
     {/*<UserPage />*/}
   </React.StrictMode>,

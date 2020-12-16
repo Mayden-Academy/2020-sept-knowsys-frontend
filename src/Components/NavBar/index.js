@@ -1,5 +1,6 @@
 import React from "react";
 import './style.css';
+import { Route, Link, BrowserRouter as Router, Switch} from 'react-router-dom';
 
 class NavBar extends React.Component {
 	render() {
@@ -9,9 +10,10 @@ class NavBar extends React.Component {
                     <img className="logoImage" src="https://www.svgrepo.com/show/25187/brain.svg" alt="Logo of a brain" />
                     <h3>KNOWSY</h3>
                 </div>
-                <button className="myProfileButton">MY PROFILE</button>
-                <button className="signOutButton">LOG OUT</button>
-            </div>
+                    <Link to="/user" className="myProfileButton">MY PROFILE</Link>
+                    <Link to ="/" className="signOutButton">LOG OUT</Link>
+                </div>
+
 		)
 	}
 }
