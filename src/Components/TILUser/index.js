@@ -1,17 +1,21 @@
 import React from 'react';
+import  UserContext from "../../UserContext";
 
 class TILUser extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            learners: []
+            learner: [],
+            usernameState: ""
         }
     }
 
     componentDidMount() {
+        let usernameX = localStorage.getItem('username') ;
+        console.log(`localStorage on TILUser usernameX is: ${usernameX}`);
         const queryString = `
             query {
-                user(username: "delta") {
+                user(username: "${usernameX}") {
                     _id
                     email
                     username
@@ -37,27 +41,34 @@ class TILUser extends React.Component {
                 // console.log('before setting state')
                 // console.log(this.state.learners)
                 this.setState({
-                    learners: dataObject.data.user
+                    learners: dataObject.data.user,
+                    usernameState: usernameX,
+                    bioState: dataObject.data.user.bio
                 })
-                // console.log('after setting state')
-                // console.log(this.state.learners)
+                console.log('after setting state and before bio')
+                console.log(this.state.learners.bio)
+                console.log('before this.props ')
+                console.log(this.props)
             })
     }
 
     render() {
+
         return (
 
-            <div className="bodyContent">
-            <h1 className="usernameHeader">@{this.state.learners.username}</h1>
-                <div className="bioContentContainer">
-                    <h3 className="bioHeader">Bio:</h3>
-                    <p className="bioContent">
-                        {this.state.learners.bio}
-                    </p>
-                </div>
-            </div>
+                    <div className="bodyContent">
+                        <h1 className="usernameHeader">@{this.state.usernameState}</h1>
+                        {/*<h1 className="usernameHeader">@{this.state.learners.username}</h1>*/}
+                        <div className="bioContentContainer">
+                            <h3 className="bioHeader">Bio:</h3>
+                            <p className="bioContent">
+                            {/*    {this.state.learners.bio}*/}
+                                {this.state.bioState}
+                            </p>
+                        </div>
+                    </div>
         )
-    }
+                }
 
 }
 

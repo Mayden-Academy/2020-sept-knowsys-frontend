@@ -10,34 +10,42 @@ import HomepageHeader from "./Components/HomepageHeader"
 import UserPage from "./Components/UserPage"
 import LoginPage from "./Components/LoginPage";
 
+import UserContext from "./UserContext";
+
 import { Route, Link, BrowserRouter as Router, Switch} from 'react-router-dom';
 
 class Routing extends React.Component {
     render() {
         return (
-            <Router>
-                <div>
-                    {/*must  have  nav here*/}
 
-                    <Switch>
-                        {/*<Route path="/" exact component={ LoginPage } />*/}
-                        <Route path="/login" component={ LoginPage } />
-                        <Route path="/user" exact component={ UserPage } />
-                        {/*<Route component={NotFound} />*/}
-                    </Switch>
-                </div>
-            </Router>
+                <Router>
+                    <div>
+                        {/*must  have  nav here*/}
+                        <Switch>
+                            {/*<Route path="/" exact component={ LoginPage } />*/}
+                            <Route path="/login" component={ LoginPage } />
+                            <Route path="/user" exact component={ UserPage } />
+                            {/*<Route component={NotFound} />*/}
+                        </Switch>
+                    </div>
+                </Router>
+
         )
     }
 }
 
 ReactDOM.render(
   <React.StrictMode>
-      <NavBar />
-      <Routing />
-    {/*<NavBar />*/}
-    {/*<LoginPage />*/}
-    {/*<UserPage />*/}
+      <UserContext.Provider>
+          {/*<UserContext.Provider value={{*/}
+          {/*    user: this.state.learners*/}
+          {/*}}>*/}
+          <NavBar />
+          <Routing />
+        {/*<NavBar />*/}
+        {/*<LoginPage />*/}
+        {/*<UserPage />*/}
+      </UserContext.Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

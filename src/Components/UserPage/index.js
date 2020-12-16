@@ -12,7 +12,9 @@ class UserPage extends React.Component {
 	render() {
 		return (
             <div>
+
                 <TILUser />
+
             </div>
 		)
 	}
