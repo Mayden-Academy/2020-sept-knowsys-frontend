@@ -1,7 +1,7 @@
 import React from "react";
 import './style.css';
 import HomepageHeader from "../HomepageHeader";
-import { Redirect } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 class LoginPage extends React.Component {
 	componentDidMount() {
@@ -63,21 +63,24 @@ class LoginPage extends React.Component {
 
 	render() {
 		return (
+			<div>
+			<HomepageHeader />
             <div className="bodyContent">
-                <HomepageHeader />
 				<div class="loginForm">
 					<form>
 						<h2>Log In</h2>
                     	<input className="loginInputs" type="text" placeholder="Email:"></input>
                     	<input classname="loginInputs" type="password" placeholder="Password:"></input>
-						<div className="loginPageButton">
+						<div className="loginPageButtons">
 							{/*//func is not being called!*/}
-						<button onClick={ this.doThing }>LOG ME IN</button>
-
+						<Link to="/user" class="loginButton" onClick={ this.doThing }>LOGIN</Link>
+						<Link to="/createaccount" class="createAccountButton" onClick={ this.doThing }>CREATE ACCOUNT</Link>
+					
 						</div>
 					</form>
 				</div>
             </div>
+			</div>
 		)
 	}
 }

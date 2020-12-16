@@ -6,9 +6,11 @@ import HomepageHeader from "../HomepageHeader";
 class CreateAccountPage extends React.Component {
 	render() {
 		return (
-            <div className="bodyContent">
+            <div>
             <HomepageHeader />
+            <div className="bodyContent">
             <CreateAccountForm />
+            </div>
             </div>
 		)
 	}

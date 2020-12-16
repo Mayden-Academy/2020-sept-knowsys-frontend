@@ -4,7 +4,7 @@ import './style.css'
 class HomepageHeader extends React.Component {
     render() {
       return (
-          <div>
+          <div class="homepageHeader">
               <h1>Welcome to Knowsy</h1>
               <h2>Sometimes, it's okay to be a Knowsy Parker.</h2>
           </div>
