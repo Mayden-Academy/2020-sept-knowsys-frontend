@@ -27,24 +27,24 @@ class CreateAccountForm extends React.Component {
             }
         }
 
-    validateBio = (ValidateBio) => {
-        console.log(ValidateBio)
-        if(ValidateBio.length <500) {
+    validateBio = (validateBio) => {
+        console.log(validateBio)
+        if(validateBio.length <500) {
             return true
         }
         else {
-            alert("Bio does not meet requirments, Max 500 characters")
+            alert("Bio does not meet requirements")
             return false;
         }
     }
 
-    validateUsername = (ValidateUsername) => {
-        console.log(ValidateUsername)
-        if(ValidateUsername.length <14) {
+    validateUsername = (validateUsername) => {
+        console.log(validateUsername)
+        if(validateUsername.length <14) {
             return true
         }
         else {
-            alert("Bio does not meet requirments, Max 14characters")
+            alert("Bio does not meet requirements")
             return false;
         }
     }
