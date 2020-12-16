@@ -15,7 +15,7 @@ class Routing extends React.Component {
     render() {
         return (
             <Router>
-                <div>
+                <div className="mainBodyContainer">
                     {/*must  have  nav here*/}
                     <NavBar />
 

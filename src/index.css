@@ -10,7 +10,7 @@ body {
   color: #ffffff;
 }
 
-#root {
+.mainBodyContainer {
   display: grid;
   grid-template-columns: 150px auto;
 }
