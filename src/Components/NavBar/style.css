@@ -1,9 +1,9 @@
 .navBar {
-    text-align: center;
     font-family: Futura;
     width: 150px;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .navLogoBackground {
@@ -12,11 +12,12 @@
     background: rgba(207, 209, 211, 0.5);
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .logoImage {
-    rotate: 180deg;
-    scale: 60%;
+    margin: 25px;
+    max-width: 100px;
 }
 
 .navBar h3 {
