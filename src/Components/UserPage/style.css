@@ -4,7 +4,8 @@
 }
 
 .usernameHeader {
-margin-bottom: 25px;
+    margin-bottom: 25px;
+    text-shadow: 2px 4px 4px #000000;
 }
 
 .bioContentContainer {
@@ -18,11 +19,11 @@ margin-bottom: 25px;
 }
 
 .bioHeader{
-margin-top: 0px;
-margin-bottom: -5px;
-font-size: 2rem;
+    margin-top: 0px;
+    margin-bottom: -5px;
+    font-size: 2rem;
 }
 
 .bioContent {
-font-family: "JetBrains Mono", monospace;
+    font-family: "JetBrains Mono", monospace;
 }

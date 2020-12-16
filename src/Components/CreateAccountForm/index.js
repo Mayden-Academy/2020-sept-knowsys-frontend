@@ -85,8 +85,8 @@ class CreateAccountForm extends React.Component {
                     <label>Add a bio (Optional)</label>
                     <textarea placeholder="Max 500 characters"></textarea>
                     <div className="createAccountButtonContainer">
-                    <Link to="/login" className="cancelFormSubmit">CANCEL</Link>
                     <Link to="/user" className="confirmFormSubmit" type="submit">SUBMIT</Link>
+                    <Link to="/login" className="cancelFormSubmit">CANCEL</Link>
                     </div>
                 </form>
             </div>

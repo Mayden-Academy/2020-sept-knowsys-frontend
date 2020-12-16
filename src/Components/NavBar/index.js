@@ -11,6 +11,7 @@ class NavBar extends React.Component {
                     <img className="logoImage" src={knowsysLogo} alt="Logo of a brain" />
                     <h3>KNOWSY</h3>
                 </div>
+                    <Link to ="/addTil" className="newTILButton">ADD TIL</Link>
                     <Link to="/user" className="myProfileButton">MY PROFILE</Link>
                     <Link to ="/login" className="logOutButton">LOG OUT</Link>
                 </div>

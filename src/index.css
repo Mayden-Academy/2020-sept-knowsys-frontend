@@ -104,3 +104,47 @@ code {
   transform-origin: 50%;
   animation-timing-function: linear;
 }
+
+.blueCircleTwo {
+  fill:#56BCE5;
+  filter: url('#blur');
+
+  animation-name: moveTwo;
+  animation-duration: 28s;
+  animation-iteration-count: infinite;
+  transform-origin: 50%;
+  animation-timing-function: linear;
+}
+
+.orangeCircleTwo {
+  fill:#FDAE47;
+  filter: url('#blur');
+
+  animation-name: moveOne;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  transform-origin: 50%;
+  animation-timing-function: linear;
+}
+
+.whiteCircleTwo {
+  fill:#ffffff;
+  filter: url('#blur');
+
+  animation-name: moveTwo;
+  animation-duration: 35s;
+  animation-iteration-count: infinite;
+  transform-origin: 50%;
+  animation-timing-function: linear;
+}
+
+@media only screen and (max-width: 750px) {
+	.mainBodyContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .circleBackground {
+    display: none;
+  }
+}
