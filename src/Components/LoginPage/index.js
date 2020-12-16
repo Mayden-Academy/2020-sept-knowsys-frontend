@@ -73,8 +73,8 @@ class LoginPage extends React.Component {
                     	<input classname="loginInputs" type="password" placeholder="Password:"></input>
 						<div className="loginPageButtons">
 							{/*//func is not being called!*/}
-						<Link to="/user" class="loginButton" onClick={ this.doThing }>LOGIN</Link>
-						<Link to="/createaccount" class="createAccountButton" onClick={ this.doThing }>CREATE ACCOUNT</Link>
+						<Link to="/user" class="loginButton">LOGIN</Link>
+						<Link to="/createaccount" class="createAccountButton">CREATE ACCOUNT</Link>
 					
 						</div>
 					</form>

@@ -1,5 +1,6 @@
 import React from "react";
 import './style.css';
+import { Link, Redirect } from "react-router-dom";
 
 class CreateAccountForm extends React.Component {
 
@@ -80,8 +81,8 @@ class CreateAccountForm extends React.Component {
                     <label>Add a bio (Optional)</label>
                     <textarea placeholder="Max 500 characters"></textarea>
                     <div className="createAccountButtonContainer">
-                    <button className="cancelFormSubmit">CANCEL</button>
-                    <button className="confirmFormSubmit" type="submit">SUBMIT</button>
+                    <Link to="/login" className="cancelFormSubmit">CANCEL</Link>
+                    <Link to="/user" className="confirmFormSubmit" type="submit">SUBMIT</Link>
                     </div>
                 </form>
             </div>

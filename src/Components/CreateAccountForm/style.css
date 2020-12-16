@@ -87,17 +87,19 @@ textarea {
     width: 300px;
 }
 
-.createAccountButtonContainer button {
+.createAccountButtonContainer a {
     width: 100px;
     height: 50px;
     border: none;
     text-align: center;
+    align-content: center;
     color: #ffffff;
     font-family: Futura, "Roboto", "JetBrains Mono", sans-serif;
     font-weight: 800;
     font-size: 0.9rem;
     transition-duration: 0.4s;
     border-radius: 25px;
+    text-decoration: none;
 }
 
 .createAccountButtonContainer {
