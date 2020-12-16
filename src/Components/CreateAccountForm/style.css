@@ -38,6 +38,16 @@ font-size: 2rem;
 font-weight: 800;
 }
 
+.createUserForm input {
+    border: none;
+    border-bottom: 4px solid #55B9E2;
+    resize: none;
+    font-size: 1.5rem;
+    font-weight: 800;
+    background-color: rgba(44, 49, 54, 0.8);
+    color: #ffffff;
+    }
+
 ::placeholder {
 color: #ffffff;
 font-weight: 400;
@@ -52,17 +62,6 @@ font-weight: 400;
     margin-bottom: 15px;
     width: 300px;
 }
-
-.createUserForm input {
-border: none;
-border-bottom: 4px solid #55B9E2;
-resize: none;
-font-size: 1.5rem;
-font-weight: 800;
-background-color: rgba(44, 49, 54, 0.8);
-color: #ffffff;
-}
-
 
 .passwordRequirementsHeader {
     margin-bottom: -5px;

@@ -3,6 +3,18 @@ import './style.css';
 
 class CreateAccountForm extends React.Component {
 
+    validateEmail = (submittedEmail) => {
+        let validEmail = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+        
+        if(submittedEmail.match(validEmail)) {
+            return true
+        }
+            else {
+                alert("Email does not meet requirements")
+                return false;
+            }
+        }
+    
     validatePassword = (submittedPassword) => {
         let validPassword = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/);
         
@@ -17,9 +29,9 @@ class CreateAccountForm extends React.Component {
 
     formSubmission = (e) => {
         e.preventDefault()
-        console.log(e.target[1].value)
-        this.validatePassword(e.target[1].value)
         console.log(e)
+        this.validateEmail(e.target[0].value)
+        this.validatePassword(e.target[1].value)
     }
 
 	render() {
