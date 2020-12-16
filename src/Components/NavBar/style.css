@@ -9,7 +9,7 @@
 .navLogoBackground {
     width: 150px;
     height: 175px;
-    background: #CFD1D3;
+    background: rgba(207, 209, 211, 0.5);
     display: flex;
     flex-direction: column;
 }
