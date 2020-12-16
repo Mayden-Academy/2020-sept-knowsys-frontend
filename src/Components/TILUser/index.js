@@ -47,7 +47,7 @@ class TILUser extends React.Component {
     render() {
         return (
 
-            <div className="bodyContent">
+            <div className="userPageContent">
             <h1 className="usernameHeader">@{this.state.learners.username}</h1>
                 <div className="bioContentContainer">
                     <h3 className="bioHeader">Bio:</h3>
