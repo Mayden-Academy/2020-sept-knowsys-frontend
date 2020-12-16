@@ -1,7 +1,7 @@
 import React from "react";
 import './style.css';
 
-class CreateAccountPage extends React.Component {
+class UserPage extends React.Component {
 	render() {
 		return (
             <div className="bodyContent">
@@ -14,4 +14,4 @@ class CreateAccountPage extends React.Component {
 		)
 	}
 }
-export default CreateAccountPage;
+export default UserPage;
