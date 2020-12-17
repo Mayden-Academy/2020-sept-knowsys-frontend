@@ -5,7 +5,15 @@ import knowsysLogo from "./knowsysLogo.png";
 import BurgerMenu from "../BurgerMenu";
 
 
+
 class NavBar extends React.Component {
+
+    logoutUser = () => {
+        localStorage.clear();
+
+    }
+
+
 	render() {
 		return (
             <div class="navMenu">
@@ -17,7 +25,7 @@ class NavBar extends React.Component {
                     </div>
                     <Link to ="/addTil" className="newTILButton">ADD TIL</Link>
                     <Link to="/user" className="myProfileButton">MY PROFILE</Link>
-                    <Link to ="/login" className="logOutButton">LOG OUT</Link>
+                    <Link to ="/login" className="logOutButton" onClick={this.logoutUser}>LOG OUT</Link>
                 </div>
             </div>
 		)

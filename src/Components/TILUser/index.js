@@ -1,4 +1,6 @@
 import React from 'react';
+
+import { Route, Redirect } from 'react-router-dom';
 import  UserContext from "../../UserContext";
 
 class TILUser extends React.Component {
@@ -19,6 +21,15 @@ class TILUser extends React.Component {
         // console.log("access_token", this.props.location.state.userToken);
         // state: { userToken: localStorage.getItem('access_token') }
 
+        if (localStorage.getItem('username')==null || (localStorage.getItem('access_token')==null)) {
+            //redirecet to /home
+
+
+
+            console.log('its null');
+            return <Redirect to="/login" />
+
+        }
 
         let usernameX = localStorage.getItem('username') ;
         console.log(`localStorage on TILUser usernameX is: ${usernameX}`);
@@ -66,19 +77,27 @@ class TILUser extends React.Component {
     }
 
     render() {
-        return (
-                    <div className="userPageContent">
-                        <h1 className="usernameHeader">@{this.state.usernameState}</h1>
-                        {/*<h1 className="usernameHeader">@{this.state.learners.username}</h1>*/}
-                        <div className="bioContentContainer">
-                            <h3 className="bioHeader">Bio:</h3>
-                            <p className="bioContent">
-                            {/*    {this.state.learners.bio}*/}
-                                {this.state.bioState}
-                            </p>
-                        </div>
-                    </div>
-                )
+        if (localStorage.getItem('username')==null) {
+            //redirecet to /home
+            console.log('its null');
+            return (<Redirect to="/login" />)
+
+        }
+        else {
+            return (
+            <div className="userPageContent">
+                <h1 className="usernameHeader">@{this.state.usernameState}</h1>
+                {/*<h1 className="usernameHeader">@{this.state.learners.username}</h1>*/}
+                <div className="bioContentContainer">
+                    <h3 className="bioHeader">Bio:</h3>
+                    <p className="bioContent">
+                        {/*    {this.state.learners.bio}*/}
+                        {this.state.bioState}
+                    </p>
+                </div>
+            </div>
+            )
+        }
     }
 
 }

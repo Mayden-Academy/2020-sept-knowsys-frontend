@@ -123,24 +123,32 @@ class CreateAccountForm extends React.Component {
                 console.log('inside CreateAccountForm THEN stmt, value of dataObject.data:  ')
                 //need to cheeck if whats returned is an error or valid user?
                 console.log(dataObject);
+
                 if (!dataObject.errors) {
                     localStorage.clear();
                     localStorage.setItem('username', inputUsername);
-                    // localStorage.setItem('access_token', this.state.userToken);
+                    localStorage.setItem('access_token', this.state.userToken);
                     console.log(`localStorage on LoginPage for inputUsername is: ${inputUsername}`)
-                    // console.log(`localStorage on LoginPage for state userToken is: ${this.state.userToken}`)
+                    console.log(`localStorage on LoginPage for state userToken is: ${this.state.userToken}`)
 
                     this.setState({
                         userToken: dataObject.data.addUser.access_token,
                         newLearner: dataObject.data.addUser,
                         redirect: true
                     })
+
+                    // newUser.access_token = token;
                     return dataObject.data;
                 }
 
                 //ELSE theres some issues with the data returned from the query
                 else {
-                    console.log('some errors happened in LoginPage line 119');
+                    //update alert or similar
+                    let customError = dataObject.errors[0].message
+                    alert(customError);
+                    console.log(dataObject.errors[0].message);
+                    // console.log('some errors happened in LoginPage line 119');
+                    return false;
                 }
             })
         }
