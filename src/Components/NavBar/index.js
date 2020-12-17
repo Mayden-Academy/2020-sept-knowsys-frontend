@@ -10,7 +10,6 @@ class NavBar extends React.Component {
 		return (
             <div class="navMenu">
                 <BurgerMenu />
-                <MenuModal />
                 <div className="navBar">
                     <div className="navLogoBackground">
                         <img className="logoImage" src={knowsysLogo} alt="Logo of a brain" />
