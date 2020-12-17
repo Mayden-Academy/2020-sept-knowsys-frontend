@@ -5,7 +5,11 @@
 @media only screen and (max-width: 750px) {
 .burgerMenuButton {
     display: block ;
-    height: 50px;
     padding-left: 20px;
+    background: none;
   }
+  
+.burgerButtonImage {
+  width: 50px;
+}
 }
