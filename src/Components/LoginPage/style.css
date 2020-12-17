@@ -29,7 +29,7 @@
     margin-bottom: 25px;
 }
 
-.loginForm a {
+.loginForm a, button {
     border: none;
     color: #ffffff;
     font-family: Futura, "Roboto", "JetBrains Mono", sans-serif;
@@ -49,9 +49,9 @@
 
 .createAccountButton {
     background-color: #55B9E2;
-    width: 175px;
     line-height: 40px;
     border-radius: 25px;
+    width: 160px;
 }
 
 .loginPageButtons {

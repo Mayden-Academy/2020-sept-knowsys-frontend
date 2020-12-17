@@ -138,8 +138,8 @@ class LoginPage extends React.Component {
                     	<input className="loginInputs" id="inputUsername" name="inputUsername" type="text" placeholder="Username:" value={this.state.usernameValue} onChange={this.handleChangeUsername} ></input>
                     	<input classname="loginInputs" id="inputPassword" name="inputPassword" type="password" placeholder="Password:" value={this.state.passwordValue} onChange={this.handleChangePassword} ></input>
 
-						<div className="loginPageButton">
-						<button onClick={ this.startLogin }>LOG ME IN</button>
+						<div className="loginPageButtons">
+						<button class="loginButton" onClick={ this.startLogin }>LOG IN</button>
 							{(this.state.redirect) ? <Redirect to={{
 								pathname: '/user',
 								state: { userToken: localStorage.getItem('access_token') }
