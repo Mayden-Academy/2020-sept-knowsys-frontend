@@ -86,11 +86,25 @@ class LoginPage extends React.Component {
 				if (!dataObject.errors) {
 					// console.log('before setting state')
 					// console.log(this.state.learners)
+
+//clear previous local storage before setting state for new user!
+					localStorage.clear();
+					localStorage.setItem('username', inputUsername );
+
+					console.log(`localStorage on LoginPage for inputUsername is: ${inputUsername}`)
+
+					localStorage.setItem('access_token', this.state.userToken);
+					console.log(`localStorage on LoginPage for state userToken is: ${this.state.userToken}`)
+
+					console.log('is this the returned user token?')
+					console.log(dataObject.data.userToken);
+
 					this.setState({
 						userToken: dataObject.data.loginUserName.access_token,
 						learners: dataObject.data.loginUserName,
 						redirect: true
 					})
+
 					// console.log('after setting state')
 					// console.log(this.state.learners)
 					console.log(dataObject.data.loginUserName);
@@ -98,10 +112,7 @@ class LoginPage extends React.Component {
 					console.log(this.state.learners)
 
 					//Try to put access token in local storage so can get it later
-					localStorage.setItem('username', inputUsername );
-					localStorage.setItem('access_token', this.state.userToken);
-					console.log(`localStorage on LoginPage for inputUsername is: ${inputUsername}`)
-					console.log(`localStorage on LoginPage for state userToken is: ${this.state.userToken}`)
+
 
 					// Need to only redirect if user token matches!
 					//this is not actually redirecting, its actualy line 130!
@@ -124,7 +135,7 @@ class LoginPage extends React.Component {
 				<div class="loginForm">
 					<form onSubmit={this.handleSubmit}>
 						<h2>Log In</h2>
-                    	<input className="loginInputs" id="inputUsername" name="inputUsername" type="text" placeholder="Email:" value={this.state.usernameValue} onChange={this.handleChangeUsername} ></input>
+                    	<input className="loginInputs" id="inputUsername" name="inputUsername" type="text" placeholder="Username:" value={this.state.usernameValue} onChange={this.handleChangeUsername} ></input>
                     	<input classname="loginInputs" id="inputPassword" name="inputPassword" type="password" placeholder="Password:" value={this.state.passwordValue} onChange={this.handleChangePassword} ></input>
 
 						<div className="loginPageButton">
