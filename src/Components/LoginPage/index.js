@@ -19,7 +19,7 @@ class LoginPage extends React.Component {
 	}
 
 	handleChangeUsername(event) {
-		// console.log(event.target.name);
+
 		this.setState({
 			usernameValue: event.target.value,
 		});
