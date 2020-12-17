@@ -27,8 +27,7 @@ class CreateAccountForm extends React.Component {
             [name]: value,
             // inputNewEmail: event.target.value,
         });
-        console.log('heres STATE');
-        console.log(this.state);
+
     }
 
 
@@ -55,7 +54,7 @@ class CreateAccountForm extends React.Component {
     }
 
     validateBio = (validateBio) => {
-        console.log(validateBio)
+
         if (validateBio.length <= 500) {
             return true
         } else {
@@ -65,7 +64,7 @@ class CreateAccountForm extends React.Component {
     }
 
     validateUsername = (validateUsername) => {
-        console.log(validateUsername)
+
         if (validateUsername.length < 14) {
             return true
         } else {
@@ -77,14 +76,14 @@ class CreateAccountForm extends React.Component {
 
     formSubmission = (e) => {
         e.preventDefault()
-        console.log(e)
+
         let validE = this.validateEmail(e.target[0].value)
         let validP = this.validatePassword(e.target[1].value)
         let validU = this.validateUsername(e.target[2].value)
         let validB = this.validateBio(e.target[3].value)
 
         if (validE && validP && validU && validB) {
-            console.log('its all valid!')
+
             //add user to db then  redirect to next page?
 
             let inputEmail = this.state.inputNewEmail;
@@ -109,7 +108,6 @@ class CreateAccountForm extends React.Component {
                     }
 			    `;
 
-            console.log(queryStringAddUser);
 
             //fetch one user
             fetch('http://localhost:4005/graphql', {
@@ -117,19 +115,17 @@ class CreateAccountForm extends React.Component {
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({query: queryStringAddUser})
             }).then((response) => {
-                // console.log('theres json')
+
                 return response.json()
             }).then((dataObject) => {
-                console.log('inside CreateAccountForm THEN stmt, value of dataObject.data:  ')
+
                 //need to cheeck if whats returned is an error or valid user?
-                console.log(dataObject);
+
 
                 if (!dataObject.errors) {
                     localStorage.clear();
                     localStorage.setItem('username', inputUsername);
                     localStorage.setItem('access_token', this.state.userToken);
-                    console.log(`localStorage on LoginPage for inputUsername is: ${inputUsername}`)
-                    console.log(`localStorage on LoginPage for state userToken is: ${this.state.userToken}`)
 
                     this.setState({
                         userToken: dataObject.data.addUser.access_token,
@@ -146,8 +142,7 @@ class CreateAccountForm extends React.Component {
                     //update alert or similar
                     let customError = dataObject.errors[0].message
                     alert(customError);
-                    console.log(dataObject.errors[0].message);
-                    // console.log('some errors happened in LoginPage line 119');
+
                     return false;
                 }
             })
