@@ -8,7 +8,6 @@ import CreateAccountPage from "./Components/CreateAccountPage";
 import HomepageHeader from "./Components/HomepageHeader"
 import UserPage from "./Components/UserPage"
 import LoginPage from "./Components/LoginPage";
-
 import { Route, Link, BrowserRouter as Router, Switch} from 'react-router-dom';
 
 class Routing extends React.Component {
@@ -24,7 +23,6 @@ class Routing extends React.Component {
                         <Route path="/login" component={ LoginPage } />
                         <Route path="/user" exact component={ UserPage } />
                         <Route path="/createaccount" exact component={ CreateAccountPage } />
-                        {/* <Route path="/addTil" exact component={ AddTilPage } /> */}
                         {/*<Route component={NotFound} />*/}
                     </Switch>
                 </div>

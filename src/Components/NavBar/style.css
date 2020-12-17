@@ -49,17 +49,17 @@ background-color: #E84118;
 
 .newTILButton {
     background-color: #2F3439;
+}
+
+@media only screen and (max-width: 750px) {
+        
+    .navBar {
+            display: none;
     }
 
-    @media only screen and (max-width: 750px) {
-        
-        .navBar {
-            display: none;
-        }
-
-        .navMenu {
+    .navMenu {
             position: sticky;
             top: 20px;
-            margin-top: 20px;  
-        }
+            
     }
+}

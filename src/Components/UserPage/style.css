@@ -27,3 +27,10 @@
 .bioContent {
     font-family: "JetBrains Mono", monospace;
 }
+
+@media only screen and (max-width: 750px) {
+    .usernameHeader {
+    text-align: center;
+    text-shadow: 0px 0px 0px #000000;
+      }
+    }

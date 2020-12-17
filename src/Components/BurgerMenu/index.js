@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 class BurgerMenu extends React.Component {
     render() {
       return (
-        <Link to = "/LoginPage">
+        <Link to = "/burger">
           <img className="burgerMenuButton" src= {burgerMenu} alt= 'icon' />
         </Link>
       )
