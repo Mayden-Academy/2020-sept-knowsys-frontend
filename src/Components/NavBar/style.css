@@ -1,0 +1,65 @@
+.navBar {
+    font-family: Futura;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.navLogoBackground {
+    width: 150px;
+    height: 175px;
+    background: rgba(207, 209, 211, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logoImage {
+    margin: 25px;
+    max-width: 100px;
+}
+
+.navBar h3 {
+    margin-top: -12.5px;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    font-weight: 400;
+    color: #2C3136;
+}
+
+.navBar a {
+    font-family: Futura, Helvetica, sans-serif;
+    font-weight: 800;
+    border: none;
+    width: 130px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.myProfileButton {
+background-color: #56BCE5;
+}
+
+.logOutButton {
+background-color: #E84118;
+}
+
+.newTILButton {
+    background-color: #2F3439;
+}
+
+@media only screen and (max-width: 750px) {
+        
+    .navBar {
+            display: none;
+    }
+
+    .navMenu {
+            position: sticky;
+            top: 20px;
+            
+    }
+}

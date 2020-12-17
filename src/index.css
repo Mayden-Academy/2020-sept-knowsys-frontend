@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto", Helvetica, sans-serif;
+  background-color: #414850;
+  color: #ffffff;
+}
+
+.mainBodyContainer {
+  display: grid;
+  grid-template-columns: 150px auto;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+@keyframes moveOne {
+  0% {
+      transform: translateX(0px);
+      transform: scale(80%);
+  }
+  25% {
+      transform: translateX(-20px);
+      transform: scale(90%);
+  }
+  50% {
+      transform: translateX(0);
+      transform: scale(100%);
+  }
+  75% {
+      transform: translateX(30px);
+      transform: scale(90%);
+  }
+  100% {
+      transform: translateX(0px);
+      transform: scale(80%);
+  }
+}
+
+@keyframes moveTwo {
+  0% {
+      transform: translateX(0px);
+      transform: scale(100%);
+  }
+  25% {
+      transform: translateX(20px);
+      transform: scale(90%);
+  }
+  50% {
+      transform: translateX(0);
+      transform: scale(80%);
+  }
+  75% {
+      transform: translateX(-75px);
+      transform: scale(90%);
+  }
+  100% {
+      transform: translateX(0px);
+      transform: scale(100%);
+  }
+}
+
+.circleBackground{
+  position: fixed;
+  z-index: -10;
+}
+
+.blueCircle{
+  fill:#56BCE5;
+  filter: url('#blur');
+
+  animation-name: moveOne;
+  animation-duration: 18s;
+  animation-iteration-count: infinite;
+  transform-origin: 50%;
+  animation-timing-function: linear;
+}
+
+.orangeCircle{
+  fill:#FDAE47;
+  filter: url('#blur');
+
+  animation-name: moveTwo;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  transform-origin: 50%;
+  animation-timing-function: linear;
+}
+
+.whiteCircle {
+  fill:#ffffff;
+  filter: url('#blur');
+
+  animation-name: moveOne;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  transform-origin: 50%;
+  animation-timing-function: linear;
+}
+
+.blueCircleTwo {
+  fill:#56BCE5;
+  filter: url('#blur');
+
+  animation-name: moveTwo;
+  animation-duration: 28s;
+  animation-iteration-count: infinite;
+  transform-origin: 50%;
+  animation-timing-function: linear;
+}
+
+.orangeCircleTwo {
+  fill:#FDAE47;
+  filter: url('#blur');
+
+  animation-name: moveOne;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  transform-origin: 50%;
+  animation-timing-function: linear;
+}
+
+.whiteCircleTwo {
+  fill:#ffffff;
+  filter: url('#blur');
+
+  animation-name: moveTwo;
+  animation-duration: 35s;
+  animation-iteration-count: infinite;
+  transform-origin: 50%;
+  animation-timing-function: linear;
+}
+
+@media only screen and (max-width: 750px) {
+	.mainBodyContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .circleBackground {
+    display: none;
+  }
+}

@@ -1,0 +1,36 @@
+.userPageContent {
+    margin-left: 25px;
+    margin-right: 30px;
+}
+
+.usernameHeader {
+    margin-bottom: 25px;
+    text-shadow: 2px 4px 4px #000000;
+}
+
+.bioContentContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    padding: 25px;
+    color: #000000;
+    margin-top: 0px;
+}
+
+.bioHeader{
+    margin-top: 0px;
+    margin-bottom: -5px;
+    font-size: 2rem;
+}
+
+.bioContent {
+    font-family: "JetBrains Mono", monospace;
+}
+
+@media only screen and (max-width: 750px) {
+    .usernameHeader {
+    text-align: center;
+    text-shadow: 0px 0px 0px #000000;
+      }
+    }

@@ -1,0 +1,62 @@
+.bodyContent {
+    margin-left: 25px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.loginForm {
+    background-color: #2C3136;
+    border-radius: 25px;
+    padding: 30px;
+    width: 500px;
+}
+
+.loginForm input {
+    border: none;
+    border-bottom: 4px solid #55B9E2;
+    resize: none;
+    font-size: 1.5rem;
+    font-weight: 800;
+    background-color: rgba(44, 49, 54, 0.9);
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.loginForm h2 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+}
+
+.loginForm a, button {
+    border: none;
+    color: #ffffff;
+    font-family: Futura, "Roboto", "JetBrains Mono", sans-serif;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.loginButton {
+    background-color: #2ECC71;
+    width: 100px;
+    line-height: 40px;
+    border-radius: 25px;
+
+}
+
+.createAccountButton {
+    background-color: #55B9E2;
+    line-height: 40px;
+    border-radius: 25px;
+    width: 160px;
+}
+
+.loginPageButtons {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding-top: 15px;
+}
