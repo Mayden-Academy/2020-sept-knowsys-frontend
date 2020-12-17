@@ -5,12 +5,21 @@ class TILUser extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            learner: [],
+            currentToken: props.accessToken,
+            learners: [],
             usernameState: ""
         }
     }
 
-    componentDidMount() {
+    //try to pass props in from prev LoginPage,  but its undefined
+    componentDidMount(props) {
+        console.log(props);
+        //this gets the exsiting name, which was set by the prev logged in user!
+        //check token - why is props still undefined??
+        // console.log("access_token", this.props.location.state.userToken);
+        // state: { userToken: localStorage.getItem('access_token') }
+
+
         let usernameX = localStorage.getItem('username') ;
         console.log(`localStorage on TILUser usernameX is: ${usernameX}`);
         const queryString = `
@@ -21,9 +30,12 @@ class TILUser extends React.Component {
                     username
                     password
                     bio
+                    access_token
                 }
             }
             `;
+
+
 
         //fetch one user
         fetch('http://localhost:4005/graphql', {
@@ -37,7 +49,10 @@ class TILUser extends React.Component {
         })
             .then((dataObject) => {
                 console.log('inside AllLearners then stmt, value of dataObject.data:  ')
-                // console.log(dataObject.data);
+                //need to verify token when getting  user out of api, in api repo!
+                //jwt.verify(token)
+
+                console.log(dataObject.data);
                 // console.log('before setting state')
                 // console.log(this.state.learners)
                 this.setState({
