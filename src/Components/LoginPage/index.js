@@ -23,27 +23,22 @@ class LoginPage extends React.Component {
 		this.setState({
 			usernameValue: event.target.value,
 		});
-		// console.log(this.state)
 	}
 
 	handleChangePassword(event) {
-		console.log(event.target.name);
 		this.setState({
 			passwordValue: event.target.value
 		});
-		// console.log(this.state)
 	}
 
 
 	handleSubmit(event) {
 		alert('A name was submitted: ' + this.state.usernameValue);
 		alert('A name was submitted: ' + this.state.passwordValue);
-		console.log(event.target);
 		event.preventDefault();
 	}
 
 	handleClick = () => {
-		console.log('logging in')
 		this.setState({
 			redirect: false
 			// loggedIn: false
@@ -55,7 +50,6 @@ class LoginPage extends React.Component {
 		//get vars from form
 		let inputUsername = this.state.usernameValue;
 		let inputPassword = this.state.passwordValue;
-		console.log('function startLogin');
 
 		//fyi variables in query MUST be inside "" otherwise browser thinks its not a string & wont compile/render!
 		const queryString = `
@@ -76,40 +70,23 @@ class LoginPage extends React.Component {
 			body: JSON.stringify({query: queryString})
 		}).
 		then((response) => {
-			// console.log('theres json')
 			return response.json()
 		})
 			.then((dataObject) => {
-				console.log('inside LoginPage THEN stmt, value of dataObject.data:  ')
 				//need to cheeck if whats returned is an error or valid user?
-				console.log(dataObject.data);
 				if (!dataObject.errors) {
-					// console.log('before setting state')
-					// console.log(this.state.learners)
 
 //clear previous local storage before setting state for new user!
 					localStorage.clear();
 					localStorage.setItem('username', inputUsername );
 
-					console.log(`localStorage on LoginPage for inputUsername is: ${inputUsername}`)
-
 					localStorage.setItem('access_token', this.state.userToken);
-					console.log(`localStorage on LoginPage for state userToken is: ${this.state.userToken}`)
-
-					console.log('is this the returned user token?')
-					console.log(dataObject.data.userToken);
 
 					this.setState({
 						userToken: dataObject.data.loginUserName.access_token,
 						learners: dataObject.data.loginUserName,
 						redirect: true
 					})
-
-					// console.log('after setting state')
-					// console.log(this.state.learners)
-					console.log(dataObject.data.loginUserName);
-					console.log("value of state.learners")
-					console.log(this.state.learners)
 
 					//Try to put access token in local storage so can get it later
 
@@ -121,7 +98,6 @@ class LoginPage extends React.Component {
 				}
 				//ELSE theres some issues with the data returned from the query
 				else {
-					console.log('some errors happened in LoginPage line 119');
 				}
 			})
 

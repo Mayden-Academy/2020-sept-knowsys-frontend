@@ -12,7 +12,6 @@ import LoginPage from "./Components/LoginPage";
 import NotFound from './Components/NotFound'
 
 import UserContext from "./UserContext";
-import CreatedUser from "./Components/CreatedUser";
 
 import { Route, Link, BrowserRouter as Router, Switch} from 'react-router-dom';
 

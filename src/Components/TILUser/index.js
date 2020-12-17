@@ -15,24 +15,18 @@ class TILUser extends React.Component {
 
     //try to pass props in from prev LoginPage,  but its undefined
     componentDidMount(props) {
-        console.log(props);
         //this gets the exsiting name, which was set by the prev logged in user!
         //check token - why is props still undefined??
-        // console.log("access_token", this.props.location.state.userToken);
         // state: { userToken: localStorage.getItem('access_token') }
 
         if (localStorage.getItem('username')==null || (localStorage.getItem('access_token')==null)) {
             //redirecet to /home
 
-
-
-            console.log('its null');
             return <Redirect to="/login" />
 
         }
 
         let usernameX = localStorage.getItem('username') ;
-        console.log(`localStorage on TILUser usernameX is: ${usernameX}`);
         const queryString = `
             query {
                 user(username: "${usernameX}") {
@@ -53,33 +47,23 @@ class TILUser extends React.Component {
             body: JSON.stringify({query: queryString})
         }).
         then((response) => {
-            console.log('theres json')
             return response.json()
         })
             .then((dataObject) => {
-                console.log('inside AllLearners then stmt, value of dataObject.data:  ')
                 //need to verify token when getting  user out of api, in api repo!
                 //jwt.verify(token)
 
-                console.log(dataObject.data);
-                // console.log('before setting state')
-                // console.log(this.state.learners)
                 this.setState({
                     learners: dataObject.data.user,
                     usernameState: usernameX,
                     bioState: dataObject.data.user.bio
                 })
-                console.log('after setting state and before bio')
-                console.log(this.state.learners.bio)
-                console.log('before this.props ')
-                console.log(this.props)
             })
     }
 
     render() {
         if (localStorage.getItem('username')==null) {
             //redirecet to /home
-            console.log('its null');
             return (<Redirect to="/login" />)
 
         }
