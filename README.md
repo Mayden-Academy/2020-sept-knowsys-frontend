@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# Demo deployable version of Knowsys-UI
+### Do not merge this version into master - it has been setup to talk to the remote Knowsys-API demo at https://2020-sept-knowsys-api.dev.io-academy.uk/graphql
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
