@@ -64,11 +64,11 @@ class CreateAccountForm extends React.Component {
     }
 
     validateUsername = (validateUsername) => {
-
+// 0 is less than 14, so no username will also be accepted!
         if (validateUsername.length < 14) {
             return true
         } else {
-            alert("Bio does not meet requirements")
+            alert("Username does not meet requirements")
             return false;
         }
     }
@@ -110,7 +110,7 @@ class CreateAccountForm extends React.Component {
 
 
             //fetch one user
-            fetch('http://localhost:4005/graphql', {
+            fetch('https://2020-sept-knowsys-api.dev.io-academy.uk/graphql', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({query: queryStringAddUser})

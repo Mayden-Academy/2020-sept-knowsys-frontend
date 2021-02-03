@@ -64,7 +64,8 @@ class LoginPage extends React.Component {
 			`;
 
 		//fetch one user
-		fetch('http://localhost:4005/graphql', {
+		// replace witih https://2020-sept-knowsys-api.dev.io-academy.uk/graphql
+		fetch('https://2020-sept-knowsys-api.dev.io-academy.uk/graphql', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({query: queryString})
